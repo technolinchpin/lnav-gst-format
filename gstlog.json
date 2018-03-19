@@ -1,0 +1,46 @@
+{
+ 	"gst" : {
+ 		"title"			: "gstreamer log format",
+ 		"description"	: "gstreamer log parser",
+ 		"url"			: "",
+ 		"regex" : {
+ 			"gst-1"	: {
+ 				"pattern" :"^(?<timestamp>\\d{1,2}:\\d{2}:\\d{2}.\\d{9})\\s+(?<val1>\\d{3})\\s+(?<val2>\\w+)\\s+(?<alert_level>\\w+)\\s+(?<logsection>\\w+) (?<body>.*)$"
+			}
+ 		},
+ 		
+		"timestamp-format" : [
+			"%k:%M:%S.%N" 
+			 
+		],
+		
+		"level-field" : "alert_level",
+ 		"level" : {
+ 			"info"	: "STATUS",
+ 			"error" : "ERROR",
+ 			"warning" : "WARN",
+ 			"debug" : "DEBUG",
+ 			"info" : "INFO"
+ 		},
+ 		"value" : {
+						
+			"alert_level"	: { "kind" : "string", "identifier" : true },
+ 			"val1"		        : { "kind" : "string", "identifier" : false },
+ 			"val2"	            : { "kind" : "string", "identifier" : false },
+ 			"logsection"			: { "kind" : "string", "identifier" : true },
+			"body"                   : {"kind" : "string"}
+ 			
+ 		},
+ 		"sample" : [
+ 			{
+ 				"line" 	:"0:00:11.924833335   689   0x25f580 DEBUG     GST_BUS print from file"
+ 			},
+ 			{
+ 				"line"  :"0:00:03.829970667   990   0x210400 DEBUG     libav in the file of "
+ 			},
+			{
+ 				"line"  :"0:00:03.829970667   990   0x210400 DEBUG     libav in the file of "
+ 			}
+ 		]
+ 	}
+ }
