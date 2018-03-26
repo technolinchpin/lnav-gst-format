@@ -1,5 +1,7 @@
 
 ====Test RegEx
+The lnav format defintion for parsing gstreamer logs. The parser regex tested with regex.com.
+
 
 Note: regex.com expression will use only single \
 
@@ -84,4 +86,5 @@ Update in ~/.lnav/formats/gstlogformat
 ===================================
 Some help from Tim .....
 https://github.com/tstack/lnav/issues/500
+A collection of format defintions : One included for strace aswell : https://github.com/PaulWay/lnav-formats
 
