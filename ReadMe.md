@@ -33,7 +33,7 @@ Result details:
 =========== 
 Update in ~/.lnav/formats/gstlogformat
 -- Note : lnav formats use \\
-
+```
 
 {
  	"gst" : {
@@ -82,7 +82,7 @@ Update in ~/.lnav/formats/gstlogformat
  		]
  	}
  }
-
+```
 ===================================
 Some help from Tim .....
 https://github.com/tstack/lnav/issues/500
