@@ -31,6 +31,25 @@ Result details:
 
 
 =========== 
+Also ensure to check with Notepad++ if the logs are copied from console to remove the unwanted ESC charcaters.
+
+What should be removed is not simply the ASCII escape character, but the entire escape sequence, which terminates the the "m".
+
+In Notepad++, you can substitute regular expressions.  this expression will search for escape sequences for colors:
+
+\x1b\[[0-9;]*m
+Tick off Search Mode = Regular expression, and click Find Next.
+
+Further reading:
+This expression will search for non-ascii values:
+
+[^\x00-\x7F]+
+Tick off 'Search Mode = Regular expression', and click Find Next.
+
+Source: Regex any ascii character
+Notepad++, How to remove all non ascii characters with regex?
+
+
 Update in ~/.lnav/formats/gstlogformat
 -- Note : lnav formats use \\
 ```
@@ -85,6 +104,8 @@ Update in ~/.lnav/formats/gstlogformat
 ```
 ===================================
 Some help from Tim .....
+
 https://github.com/tstack/lnav/issues/500
+
 A collection of format defintions : One included for strace aswell : https://github.com/PaulWay/lnav-formats
 
