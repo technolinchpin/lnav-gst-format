@@ -1,9 +1,8 @@
-
-====Test RegEx
+## Test RegEx
 The lnav format defintion for parsing gstreamer logs. The parser regex tested with regex.com.
 
 
-Note: regex.com expression will use only single \
+Note: [regex.com](http://www.regexe.com/) expression will use only single \
 
 http://www.regexe.com/
 
@@ -14,7 +13,7 @@ RegEx
 (?<timestamp>\d{1,2}:\d{2}:\d{2}.\d{9})\s+(?<val1>\d{3})\s+(?<val2>\w+)\s+(?<alertlevel>\w+)\s+(?<logsection>\w+)\s+(?<fileinfo>\w+.\w:\d+:\w+:)\s+(?<body>.*)$
 
 
-=== Parsed Output
+_Parsed Output_
 
 Result details:
 1. 	0:00:00.000644666 990 0x210400 INFO GST_INIT gst.c:511:init_pre: Initializing GStreamer Core Library version 1.8
@@ -30,7 +29,7 @@ Result details:
  	1.7. Group: Initializing GStreamer Core Library version 1.8
 
 
-=========== 
+----
 Also ensure to check with Notepad++ if the logs are copied from console to remove the unwanted ESC charcaters.
 
 What should be removed is not simply the ASCII escape character, but the entire escape sequence, which terminates the the "m".
@@ -50,7 +49,7 @@ Source: Regex any ascii character
 Notepad++, How to remove all non ascii characters with regex?
 
 
-Update in ~/.lnav/formats/gstlogformat
+_Update in ~/.lnav/formats/gstlogformat_
 -- Note : lnav formats use \\
 ```
 
@@ -102,7 +101,7 @@ Update in ~/.lnav/formats/gstlogformat
  	}
  }
 ```
-===================================
+-------
 Some help from Tim .....
 
 https://github.com/tstack/lnav/issues/500
